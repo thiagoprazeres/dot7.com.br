@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: light --default;
+}
+
+:root {
+    --color-primary: oklch(0.44 0.0728 190.96);
+    --color-secondary: oklch(0.71 0.1108 191.94);
+    --color-error: oklch(0.52 0.1708 24.68);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('/assets/hero-pattern.svg');
+}

@@ -1,0 +1,47 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #26A69A, #2C3E50, #26A69A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#escola {
+    background: linear-gradient(0deg, rgba(147, 147, 147, 1) 50%, rgba(57, 211, 206, 1) 50%);
+}
+
+#cloud {
+    background: url("/assets/bg-clouds.png") repeat-x 0 0 transparent;
+    width: 100%;
+    background-size: auto;
+}
+
+#ground {
+    background: url("/assets/grass-leaves-silhouette-svgrepo-com.png") repeat-x 0 0 transparent;
+    background-size: auto 96px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 96px;
+    min-height: 96px;
+    border: 0 none transparent;
+    outline: 0 none transparent;
+    -webkit-transform: translate3d(0, 0, 0.01);
+    transform: translate3d(0, 0, 0.01);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
