@@ -1,4 +1,4 @@
-name: Deploy via SCP com Senha
+name: Deploy via SCP com Chave SSH
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
@@ -18,12 +19,12 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: Deploy via SCP com senha
+      - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           source: "dist/dot7/browser/"
           target: ${{ secrets.DEPLOY_TARGET }}
