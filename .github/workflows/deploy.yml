@@ -31,4 +31,3 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "dist/dot7/browser/"
           target: ${{ secrets.DEPLOY_TARGET }}
-          args: "-avz" # Sem o parâmetro --delete para preservar outros arquivos/pastas
