@@ -1,4 +1,4 @@
-name: Deploy to Bluehost
+name: Deploy via SCP com Senha
 
 on:
   push:
@@ -10,12 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v4
-
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "22"
+        uses: actions/checkout@v3
 
       - name: Instalar dependências
         run: npm install
@@ -23,7 +18,7 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: SCP Command to Transfer Files
+      - name: Deploy via SCP com senha
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.DEPLOY_HOST }}
