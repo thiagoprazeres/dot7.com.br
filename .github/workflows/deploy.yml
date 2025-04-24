@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to Bluehost
 
 on:
   push:
@@ -23,11 +23,15 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: SCP Command to Transfer Files
-        uses: appleboy/scp-action@v0.1.7
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.7.0
         with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "dist/dot7/browser/"
-          target: ${{ secrets.DEPLOY_TARGET }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add Server to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via RSYNC
+        run: rsync -avz -e ssh dist/dot7/browser/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home4/dotsevco/public_html
