@@ -8,7 +8,7 @@ export const routes: Routes = [
     {
         path: 'sobre',
         loadComponent: () => import('./pages/sobre/sobre.component').then(m => m.SobreComponent),
-        title: 'Sobre | Dot7 Tecnologia'
+        title: 'Sobre nós | Dot7 Tecnologia'
     },
     {
         path: 'solucoes',
@@ -28,7 +28,7 @@ export const routes: Routes = [
     {
         path: 'solucoes/equipamentos',
         loadComponent: () => import('./pages/solucoes/equipamentos/equipamentos.component').then(m => m.EquipamentosComponent),
-        title: 'Equipamentos | Dot7 Tecnologia'
+        title: 'Equipamentos integrados | Dot7 Tecnologia'
     },
     // {
     //     path: 'solucoes/fabrica',
