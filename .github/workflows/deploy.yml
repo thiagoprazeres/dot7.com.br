@@ -23,15 +23,13 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
-      - name: Add SSH key
-        uses: webfactory/ssh-agent@v0.7.0
+      - name: SCP Command to Transfer Files
+        uses: appleboy/scp-action@v0.1.7
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Add Server to Known Hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy via RSYNC
-        run: rsync -avz -e ssh dist/dot7/browser/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home4/dotsevco/public_html
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
+          port: 22
+          source: "dist/dot7/browser/"
+          target: ${{ secrets.DEPLOY_TARGET }}
+          overwrite: true
