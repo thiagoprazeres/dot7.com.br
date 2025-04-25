@@ -1,59 +1,51 @@
-# Dot7
+# Dot7 Tecnologia
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Acesse em produção: [https://dot7.com.br/](https://dot7.com.br/)
 
-## Development server
+## Descrição
 
-To start a local development server, run:
+Este repositório contém o código-fonte do site dot7.com.br, um projeto focado em soluções digitais inovadoras e presença online profissional.
 
-```bash
-ng serve
-```
+## Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular SSR (Server-Side Rendering)
+- DaisyUI
+- GSAP (GreenSock Animation Platform)
 
-## Code scaffolding
+## Instalação e Uso Local
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/thiagoprazeres/dot7.com.br.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd dot7.com.br
+   ```
+3. Instale as dependências (se aplicável):
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor local (se aplicável):
+   ```bash
+   npm start
+   ```
+5. Acesse `http://localhost:3000` no navegador.
 
-```bash
-ng generate component component-name
-```
+## Deploy
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+O site está disponível em produção no endereço: [https://dot7.com.br/](https://dot7.com.br/)
 
-```bash
-ng generate --help
-```
+## Contribuição
 
-## Building
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-To build the project run:
+## Licença
 
-```bash
-ng build
-```
+Este projeto está sob a licença MIT.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contato
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para dúvidas ou sugestões:
+- Email: contato@dot7.com.br
+- Site: [https://dot7.com.br/](https://dot7.com.br/)

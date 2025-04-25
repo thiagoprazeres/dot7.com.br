@@ -1,29 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-theme="dot7theme">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dot7 Tecnologia: Controle de acesso</title>
+    <meta
+      name="description"
+      content="É uma empresa do Porto Digital que através de dispositivos móveis realiza o controle de acesso de pessoas nos mais diversos ambientes, como escolas, eventos e até shoppings"
+    />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Dot7 Tecnologia: Controle de acesso</title>
-  <meta name="description"
-    content="É uma empresa do Porto Digital que através de dispositivos móveis realiza o controle de acesso de pessoas nos mais diversos ambientes, como escolas, eventos e até shoppings">
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="light" />
+    <meta name="theme-color" content="#0a5f5c" />
 
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="light">
-  <meta name="theme-color" content="#0a5f5c">
+    <!-- Dados estruturados Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Dot7 Tecnologia",
+        "url": "https://dot7.com.br/",
+        "logo": "https://dot7.com.br/assets/logo.png",
+        "description": "Empresa do Porto Digital especializada em controle de acesso por dispositivos móveis para ambientes como escolas, eventos e shoppings.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. da Guia, 142",
+          "addressLocality": "Recife",
+          "addressRegion": "PE",
+          "postalCode": "50030-210",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.0617597,
+          "longitude": -34.8718549
+        },
+        "telephone": "+55 81 98883-9607",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contato@dot7.com.br",
+          "contactType": "customer support",
+          "availableLanguage": ["Portuguese", "English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/dot7-tecnologia/",
+          "https://maps.app.goo.gl/5b6MGJqdLVaTcy7w7"
+        ]
+      }
+    </script>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dot7.com.br/">
-  <meta property="og:title" content="Dot7 Tecnologia">
-  <meta property="og:description" content="Excelência em controle de acesso">
-  <meta property="og:image" content="https://dot7.com.br/assets/images/logo-capa.png">
-</head>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dot7.com.br/" />
+    <meta property="og:title" content="Dot7 Tecnologia" />
+    <meta
+      property="og:description"
+      content="Excelência em controle de acesso"
+    />
+    <meta
+      property="og:image"
+      content="https://dot7.com.br/assets/images/logo-capa.png"
+    />
+  </head>
 
-<body>
-  <app-root></app-root>
-</body>
-
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

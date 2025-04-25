@@ -1,0 +1,2 @@
+npm run build
+rsync -avz dist/dot7/browser/ dotsevco@dot7.com.br:/home4/dotsevco/public_html
