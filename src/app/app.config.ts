@@ -3,7 +3,8 @@ import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from 
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: "top", anchorScrolling: 'enabled' }), withComponentInputBinding()), provideClientHydration(withEventReplay())]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: "top", anchorScrolling: 'enabled' }), withComponentInputBinding()), provideClientHydration(withEventReplay()), provideHttpClient()]
 };
