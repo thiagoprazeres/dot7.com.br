@@ -1,29 +1,48 @@
 <div
-    class="navbar container sm:mx-auto sm:rounded-full px-4 sm:px-8 bg-white/80 text-base-content sticky top-0 sm:top-1 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur shadow-2xs sm:shadow-xs transition-shadow duration-100">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        class="flex-1 flex items-center space-x-2 rtl:space-x-reverse">
-        <img src="assets/dot7-brand.svg" alt="Dot7 Tecnologia" class="h-10" />
-        <div>
-            <h1 class="hidden sm:inline self-center text-xl font-bold whitespace-nowrap leading-none text-primary">
-                Dot7 Tecnologia
-            </h1>
-        </div>
-    </a>
-    <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-            <li><a routerLink="/sobre" routerLinkActive="active">Sobre nós</a></li>
-            <li>
-                <details>
-                    <summary>Soluções</summary>
-                    <ul class="bg-base-100 rounded-t-none p-2">
-                        <li><a routerLink="/solucoes/cp7-school" routerLinkActive="active">CP7School</a></li>
-                        <li><a routerLink="/solucoes/vou-buscar" routerLinkActive="active">VouBusCar</a></li>
-                        <li><a routerLink="/solucoes/equipamentos" routerLinkActive="active">Equipamentos</a></li>
-                        <!-- <li><a routerLink="/solucoes/fabrica" routerLinkActive="active">Fábrica</a></li> -->
-                    </ul>
-                </details>
-            </li>
-            <li><a routerLink="/contato" routerLinkActive="active">Contato</a></li>
-        </ul>
+  class="navbar container sm:mx-auto sm:rounded-full px-4 sm:px-8 bg-white/80 text-base-content sticky top-0 sm:top-1 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur shadow-2xs sm:shadow-xs transition-shadow duration-100"
+>
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="flex-1 flex items-center space-x-2 rtl:space-x-reverse"
+  >
+    <img src="assets/dot7-brand.svg" alt="Dot7 Tecnologia" class="h-10" />
+    <div>
+      <h1
+        class="hidden sm:inline self-center text-xl font-bold whitespace-nowrap leading-none text-primary"
+      >
+        Dot7 Tecnologia
+      </h1>
     </div>
+  </a>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a routerLink="/sobre" routerLinkActive="active">Sobre nós</a></li>
+      <li>
+        <details>
+          <summary #summary>Soluções</summary>
+          <ul class="bg-base-100 rounded-t-none p-2">
+            <li (click)="handleClick()">
+              <a routerLink="/solucoes/cp7-school" routerLinkActive="active"
+                >CP7School</a
+              >
+            </li>
+            <li (click)="handleClick()">
+              <a routerLink="/solucoes/vou-buscar" routerLinkActive="active"
+                >VouBusCar</a
+              >
+            </li>
+            <li (click)="handleClick()">
+              <a routerLink="/solucoes/equipamentos" routerLinkActive="active"
+                >Equipamentos</a
+              >
+            </li>
+            <!-- <li><a routerLink="/solucoes/fabrica" routerLinkActive="active">Fábrica</a></li> -->
+          </ul>
+        </details>
+      </li>
+      <li><a routerLink="/contato" routerLinkActive="active">Contato</a></li>
+    </ul>
+  </div>
 </div>
