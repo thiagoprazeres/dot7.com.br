@@ -30,10 +30,21 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/solucoes/equipamentos/equipamentos.component').then(m => m.EquipamentosComponent),
         title: 'Equipamentos integrados | Dot7 Tecnologia'
     },
-    // {
-    //     path: 'solucoes/fabrica',
-    //     loadComponent: () => import('./pages/solucoes/fabrica/fabrica.component').then(m => m.FabricaComponent)
-    // },
+    {
+        path: 'solucoes/fabrica',
+        loadComponent: () => import('./pages/solucoes/fabrica/fabrica.component').then(m => m.FabricaComponent),
+        title: 'Fábrica de Software | Dot7 Tecnologia'
+    },
+    {
+        path: 'solucoes/empresarial',
+        loadComponent: () => import('./pages/solucoes/empresarial/empresarial.component').then(m => m.EmpresarialComponent),
+        title: 'Empresarial | Dot7 Tecnologia'
+    },
+    {
+        path: 'solucoes/evento-corporativo',
+        loadComponent: () => import('./pages/solucoes/evento-corporativo/evento-corporativo.component').then(m => m.EventoCorporativoComponent),
+        title: 'Evento Corporativo | Dot7 Tecnologia'
+    },
     {
         path: 'contato',
         loadComponent: () => import('./pages/contato/contato.component').then(m => m.ContatoComponent),
