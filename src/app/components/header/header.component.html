@@ -2,6 +2,7 @@
   class="navbar container sm:mx-auto sm:rounded-full px-4 sm:px-8 bg-white/80 text-base-content sticky top-0 sm:top-1 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur shadow-2xs sm:shadow-xs transition-shadow duration-100"
 >
   <a
+    href="/"
     routerLink="/"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
@@ -18,28 +19,28 @@
   </a>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
-      <li><a routerLink="/sobre" routerLinkActive="active">Sobre nós</a></li>
+      <li><a href="/sobre" routerLink="/sobre" routerLinkActive="active">Sobre nós</a></li>
       <li>
         <details>
           <summary #summary>Soluções</summary>
           <ul class="bg-base-100 rounded-t-none p-2">
             <li (click)="handleClick()">
-              <a routerLink="/solucoes/cp7-school" routerLinkActive="active"
+              <a href="/solucoes/cp7-school" routerLink="/solucoes/cp7-school" routerLinkActive="active"
                 >CP7School</a
               >
             </li>
             <li (click)="handleClick()">
-              <a routerLink="/solucoes/vou-buscar" routerLinkActive="active"
+              <a href="/solucoes/vou-buscar" routerLink="/solucoes/vou-buscar" routerLinkActive="active"
                 >VouBusCar</a
               >
             </li>
             <li (click)="handleClick()">
-              <a routerLink="/solucoes/empresarial" routerLinkActive="active"
+              <a href="/solucoes/empresarial" routerLink="/solucoes/empresarial" routerLinkActive="active"
                 >Empresarial</a
               >
             </li>
             <li (click)="handleClick()">
-              <a routerLink="/solucoes/equipamentos" routerLinkActive="active"
+              <a href="/solucoes/equipamentos" routerLink="/solucoes/equipamentos" routerLinkActive="active"
                 >Equipamentos</a
               >
             </li>
@@ -52,7 +53,7 @@
           </ul>
         </details>
       </li>
-      <li><a routerLink="/contato" routerLinkActive="active">Contato</a></li>
+      <li><a href="/contato" routerLink="/contato" routerLinkActive="active">Contato</a></li>
     </ul>
   </div>
 </div>
